@@ -516,6 +516,8 @@ contexts:
         - meta_content_scope: meta.statement.decorator.python
         - match: '@'
           scope: keyword.other.decorator.python
+        - match: '(?<=@){{identifier}}(?: *\. *{{identifier}})*(?=\s*$)'
+          scope: entity.name.decorator.python
         - include: line-continuation-or-pop
         - include: function-calls
         - include: dotted-name
